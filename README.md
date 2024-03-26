@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+# 해야 할 일 리스트 앱 프로젝트 👩‍💻
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 투두앱에서 구현된 기능들 
 
-## Available Scripts
+- <b>날짜 선택:</b> datepicker를 활용해서 날짜 표시 및 변경을 할 수 있습니다.
+- <b>이름 입력:</b> useRef와 useState hook를 활용해서 사용자 이름 입력 및 변경을 할 수 있습니다.
+- <b>타이머 기능:</b> useState hook를 활용해서 시작, 정지, 리셋 기능이 포함된 타이머를 구현합니다.
+- <b>전체 아이템 표시:</b> useState hook를 활용해서 현재의 모든 할 일 항목을 배열로 처리해서 보여줍니다.
+- <b>아이템 추가/삭제:</b> useState hook를 활용해서 새로운 할 일 항목을 기존 배열에 추가하거나 기존 항목을 삭제할 수 있습니다.
+- <b>아이템 체크박스:</b> 아이템의 staus 상태 값을 변경해서 완료된 항목을 표시합니다.
+- <b>아이템 필터링:</b> useState hook를 활용해서 특정 기준에 따라 할 일 항목을 필터링하여 보여줄 수 있습니다. (예: 마감 기한, 중요도 등)
+- <b>다크 모드 지원:</b> useState, useEffect hook과 tailwindcss, createContext()를 활용해서 다크 모드를 구현합니다.
+- <b>로컬 스토리지 저장:</b> useState, useEffect를 활용해서 사용자 이름, 사용자의 할 일 목록을 로컬 스토리지에 저장하여 나중에 앱을 다시 열 때 이전 상태를 유지할 수 있습니다.
 
-In the project directory, you can run:
+## 완성작 보기 
 
-### `npm start`
+미리보기 : https://tiny-salamander-d72637.netlify.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 사용스택
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- react.js(https://react.dev/)와 typescript를 사용하여 사이트를 번들링하고 관리합니다.
+- react-icons(https://react-icons.github.io/react-icons/) 를 이용하여 아이콘들을 활용했습니다.
+- UUID(https://www.npmjs.com/package/react-uuid)를 사용해서 data의 고유한 아이디를 자동으로 생성합니다.
+- tailwindcss(https://tailwindcss.com/docs/installation)를 사용해서 다크 모드를 구현합니다.
+- datepicker(https://reactdatepicker.com/)를 사용합니다.
+- netlify(https://www.netlify.com/) 를 통해 사이트를 배포합니다.
+- git(https://github.com/) 을 사용하여 파일을 관리합니다.
+- HTML, CSS 기반으로 웹사이트의 기본 레이아웃 설계하고, 웹 표준 및 웹 접근성을 준수하여 작업합니다. [ARIA(Accessible Rich Internet Applications)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 프로젝트 실행
+- typescript를 설치합니다. `npx create-react-app my-app --template typescript`
+- react-icons를 설치합니다. `npm install react-icon ==save`
+- UUID를 설치합니다 `npm install --save @types/uuid`
+- tailwindcss를 설치합니다. `npm install -D tailwindcss`
+- datepicker를 설치합니다. `npm install react-datepicker --save`, `npm i --save-dev @types/react-datepicker`
