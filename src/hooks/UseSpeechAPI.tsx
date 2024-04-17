@@ -1,5 +1,3 @@
-"use client"
-
 import React, { useEffect, useState } from 'react';
 
 let recongnition: any = null;
@@ -12,41 +10,40 @@ if("webkitSpeechRecognition" in window) {
 }
 
 const UseSpeechAPI = () => {
-    const [text, setText] = useState<string>();
-    const [isListening, setIsListening] = useState(false);
+    const [spokenText, setSpokenText] = useState<string>('');
+    const [listening, setListening] = useState(false);
 
     useEffect(() => {
         if (!recongnition) return;
 
         recongnition.onresult = (event: SpeechRecognitionEvent) => {
             console.log('onresult event : ', event);
-            setText(event.results[0][0].transcript)
+            setSpokenText(event.results[0][0].transcript)
             recongnition.stop();
-            setIsListening(false);
+            setListening(false);
         }
     }, []);
 
     const startListening = () => {
-        setText('')
-        setIsListening(true);
+        setSpokenText('')
+        setListening(true);
         recongnition.start();
     }
 
     const stopListening = () => {
-        setIsListening(false);
+        setListening(false);
         recongnition.stop();
     }
 
-
-
     return {
-        text,
-        isListening,
+        spokenText,
+        setSpokenText,
+        listening,
         startListening,
         stopListening,
         hasRecognitionSupport: !! recongnition,
     }
 }
 
-export default UseSpeechAPI;
 
+export default UseSpeechAPI;
